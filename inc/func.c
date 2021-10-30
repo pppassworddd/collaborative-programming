@@ -25,12 +25,13 @@ int HandleInputGrade(String a) {
     	return 5;
 	}
 }
-int HandleInputNum(int num){
+int HandleInputNum(){
 	cout<<"请输入题目数"<<endl;
+	int num;
 	cin >> num;
 	return num;
 }
-double HandleInputAnswer(int num){
+double HandleInputAnswer(){
 	double ans;
 	cin>>ans;
 	return ans;
