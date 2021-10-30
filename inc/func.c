@@ -54,6 +54,24 @@ bool Judge(double res, double userRes) {
     }
 }	
 
+
+int Level_12(data quesdata) {
+    int i;
+    for ( i = 1; 2*i - 1 < quesdata.Strnum; i++)
+    {
+        if (quesdata.num[2 * i - 1] == plus)
+        {
+            quesdata.num[2 * i] = quesdata.num[2 * i] + quesdata.num[2 * i - 2];
+       }
+        else if (quesdata.num[2 * i - 1] == minus)
+        {
+            quesdata.num[2 * i] = quesdata.num[2 * i - 2] - quesdata.num[2 * i];
+        }
+       
+    }
+    return quesdata.num[quesdata.Strnum];
+}
+
 int Level_34(data quesdata) {
 	int num[10]={0};
 	int top=0;
