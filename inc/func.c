@@ -1,5 +1,17 @@
 #include "func.h"
 
+int HandleInputGrade(string grade) {
+    string gradeNum[6] = {"一年级", "二年级", "三年级", 
+        "四年级", "五年级", "六年级"};
+    int flag;
+    for (int i = 0; i < 6; i++) {
+        flag = grade.compare(gradeNum[i]);
+        if (!flag) {
+            return i+1;
+        }
+    }
+}
+
 int HandleInputGrade(String a) {
     cout<<"请输入你的年级"<<endl;
     cin>>a;
