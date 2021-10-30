@@ -56,6 +56,77 @@ bool Judge(double res, double userRes) {
 }	
 
 
+int Level_12(data quesdata) {
+    int i;
+    for ( i = 1; 2*i - 1 < quesdata.Strnum; i++)
+    {
+        if (quesdata.num[2 * i - 1] == plus)
+        {
+            quesdata.num[2 * i] = quesdata.num[2 * i] + quesdata.num[2 * i - 2];
+       }
+        else if (quesdata.num[2 * i - 1] == minus)
+        {
+            quesdata.num[2 * i] = quesdata.num[2 * i - 2] - quesdata.num[2 * i];
+        }
+       
+    }
+    return quesdata.num[quesdata.Strnum];
+}
+
+int Level_34(data quesdata) {
+	int num[10]={0};
+	int top=0;
+	int flag=0;
+	while(flag<quesdata.Strnum)
+	{
+		if(flag%2==0)
+		{
+			if(num[top-1]>10000&&top>0)
+			{
+				if(num[top-1]-10000==div)
+				{		
+					num[top-2]/=quesdata.num[flag];
+					top--;
+				}
+				if(num[top-1]-10000==multi)
+				{
+					num[top-2]*=quesdata.num[flag];
+					top--;
+				}
+			
+				if(num[top-1]-10000==plus||num[top-1]-10000==minus)
+				{
+					num[top]=quesdata.num[flag];
+					top++;
+				}	
+			}
+			else
+			{
+				num[top]=quesdata.num[flag];
+				top++;
+			}
+		}
+		else
+		{
+			num[top]=quesdata.num[flag]+10000;
+			top++;
+		}	
+		flag++;
+	}
+	int sum=num[0];
+	for(int i=1;i<top;i+=2)
+		{
+			if(num[i]-10000==1)
+			{
+				sum+=num[i+1];
+			}
+			if(num[i]-10000==2)
+			{
+				sum-=num[i+1];
+			}
+		}
+		return sum;
+}
 
 double Level_56(){
     double num1;
