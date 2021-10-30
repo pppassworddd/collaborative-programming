@@ -61,3 +61,42 @@ double Level_56(){
 
 
 
+
+double GenQuestion(int level) {
+    // 生成一个4以下，2以上的随机数表示多少个数的四则运算，然后生成对应个随机数作为运算数据，另外生成一个1~4的随机数表示加减乘除  
+    int strnum; 
+    double res;
+    strnum = rand() % 4;
+    leng = strnum*2;
+    int i;
+    quesdata.Strnum = leng-1;
+    if ( level == 1 || level == 2 ){
+	for(i=0;i+2<leng;i+=2){
+    	quesdata[i] = rand() % 100;
+    	quesdata[i+1] = rand() % 4;
+	}
+	}
+    
+    else if( level == 3 || level == 4 ){
+    		for(i=0;i+2<leng;i+=2){
+    	quesdata[i] = rand() % 10000;
+    	quesdata[i+1] = rand() % 4;
+	}
+    }
+    
+    else if ( level == 5 || level == 6 ){
+    	for(i=0;i+2<leng;i+=2){
+    	quesdata[i] = rand() % 10000;
+    	quesdata[i+1] = rand() % 4;
+	}
+	}
+    
+    if ( level == 1 || level == 2 )
+        res = Level_12();
+    else if( level == 3 || level == 4 )
+        res = Level_34();
+    else if ( level == 5 || level == 6 )
+        res = Level_56();
+    
+    return res;
+}
