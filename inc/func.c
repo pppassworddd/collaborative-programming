@@ -31,4 +31,13 @@ void HandleOutput(){
 		cout<<"结束！错了 "<<tofnum<<" 题哦"<<endl;
 	}
 }
-	
+bool Judge(double res, double userRes) {
+    if（res==userRes）
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}	
