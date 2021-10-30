@@ -1,4 +1,5 @@
 #include"UserIO.h"
+#include <stdio.h>
 
 int UserIO::getQuestionAmount(){
     return 0; // 获取题目数量
@@ -17,4 +18,12 @@ void UserIO::putStringPoly(string poly){
 
 void UserIO::putRes(int num){
     // 输出最终结果
+    if(num==0)
+	{
+		printf("结束！全部正确，太棒了！");
+	}
+	else
+	{
+		printf("结束！错了 %d 题哦",num);
+	}
 };
