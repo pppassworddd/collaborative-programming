@@ -5,14 +5,7 @@
 #define div 3
 #define multi 4
 
-struct data
-{
-    /* data */
-    double num[10];  //代表 数据
-    int Strnum;  // 总的数字和运算符数量
-} quesdata;
-
-int HandleInputGrade(string grade);  // 返回年级
+int HandleInputGrade();  // 返回年级
 
 int HandleInputNum();  // 输入题目数量
 
@@ -22,10 +15,10 @@ void HandleOutput();
 
 double GenQuestion(int level);
 
-int Level_12(data quesdata);
+int Level_12();
 
-int Level_34(data quesdata);
+int Level_34();
 
-double Level_56(data quesdata);
+double Level_56();
 
 bool Judge(double res, double userRes);

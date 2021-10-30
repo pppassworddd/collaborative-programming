@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
-#include "inc/func.h"
+
+#include "../inc/func.h"
 
 using namespace std;
 
@@ -8,7 +9,7 @@ int main(){
     double res=GenQuestion(HandleInputGrade());
 	double userRes=HandleInputAnswer();
 	int i;
-	int num = HandleInputNum()
+	int num = HandleInputNum();
 	for(i=0;i<num;i++)
 	{
 		Judge(res,userRes);

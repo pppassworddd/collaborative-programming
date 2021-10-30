@@ -1,18 +1,28 @@
 #include "func.h"
 
-int HandleInputGrade(string grade) {
-    string gradeNum[6] = {"一年级", "二年级", "三年级", 
-        "四年级", "五年级", "六年级"};
-    int flag;
-    for (int i = 0; i < 6; i++) {
-        flag = grade.compare(gradeNum[i]);
-        if (!flag) {
-            return i+1;
-        }
-    }
-}
+#include <bits/stdc++.h>
 
-int HandleInputGrade(String a) {
+struct data
+{
+    /* data */
+    double num[10];  //代表 数据
+    int Strnum;  // 总的数字和运算符数量
+} quesdata;
+
+// int HandleInputGrade() {
+//     string gradeNum[6] = {"一年级", "二年级", "三年级", 
+//         "四年级", "五年级", "六年级"};
+//     int flag;
+//     for (int i = 0; i < 6; i++) {
+//         flag = grade.compare(gradeNum[i]);
+//         if (!flag) {
+//             return i+1;
+//         }
+//     }
+// }
+
+int HandleInputGrade() {
+	string a;
     cout<<"请输入你的年级"<<endl;
     cin>>a;
     if(a[0]=="一"||a[0]=="二"){
@@ -56,7 +66,7 @@ bool Judge(double res, double userRes) {
 }	
 
 
-int Level_12(data quesdata) {
+int Level_12() {
     int i;
     for ( i = 1; 2*i - 1 < quesdata.Strnum; i++)
     {
@@ -73,7 +83,7 @@ int Level_12(data quesdata) {
     return quesdata.num[quesdata.Strnum];
 }
 
-int Level_34(data quesdata) {
+int Level_34() {
 	int num[10]={0};
 	int top=0;
 	int flag=0;
