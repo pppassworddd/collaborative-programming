@@ -1,0 +1,44 @@
+@startuml 类图
+
+class App{
+    UserIO userIO
+    Level level
+    QuestionGen questionGen
+    Judger judger
+
+    int num
+    string grade
+    double userRes
+
+    Roly roly
+
+    run()
+}
+
+class Roly(){
+    double[] nums
+    char[] operators
+    int 
+}
+
+class UserIO{
+
+    int getQuestionAmout()
+    string getGrade()
+    int getUserAnswer()
+
+    void putStringPoly()
+    void putRes()
+}
+
+class QuestionGen {
+    Roly getRoly()
+}
+
+class Judger{
+    double res
+
+    double getRes()
+    bool check() 
+} 
+@enduml
