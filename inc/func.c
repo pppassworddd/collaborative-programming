@@ -25,12 +25,13 @@ int HandleInputGrade(String a) {
     	return 5;
 	}
 }
-int HandleInputNum(int num){
+int HandleInputNum(){
 	cout<<"请输入题目数"<<endl;
+	int num;
 	cin >> num;
 	return num;
 }
-double HandleInputAnswer(int num){
+double HandleInputAnswer(){
 	double ans;
 	cin>>ans;
 	return ans;
@@ -84,21 +85,21 @@ double GenQuestion(int level) {
     if ( level == 1 || level == 2 ){
 	for(i=0;i+2<leng;i+=2){
     	quesdata[i] = rand() % 100;
-    	quesdata[i+1] = rand() % 4;
+    	quesdata[i+1] = rand() % 100;
 	}
 	}
     
     else if( level == 3 || level == 4 ){
     		for(i=0;i+2<leng;i+=2){
     	quesdata[i] = rand() % 10000;
-    	quesdata[i+1] = rand() % 4;
+    	quesdata[i+1] = rand() % 10000;
 	}
     }
     
     else if ( level == 5 || level == 6 ){
     	for(i=0;i+2<leng;i+=2){
     	quesdata[i] = rand() % 10000;
-    	quesdata[i+1] = rand() % 4;
+    	quesdata[i+1] = rand() % 10000;
 	}
 	}
     
