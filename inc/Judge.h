@@ -1,5 +1,5 @@
-#ifndef _USERIO_H_
-#define _USERIO_H_
+#ifndef _JUDGE_H_
+#define _JUDGE_H_
 #include<iostream>
 using namespace std;
 

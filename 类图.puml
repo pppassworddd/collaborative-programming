@@ -16,9 +16,7 @@ class App{
 }
 
 class Roly(){
-    double[] nums
-    char[] operators
-    int 
+    
 }
 
 class UserIO{

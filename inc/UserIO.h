@@ -3,12 +3,19 @@
 #include<iostream>
 using namespace std;
 
-int HandleInputGrade(string grade);  // 返回年级
+class UserIO
+{
+private:
+    /* data */
+public:
 
-int HandleInputNum(int num);  // 输入题目数量
 
-int HandleInputAnswer(int num);  // 用户输入答案
+    int getQuestionAmount(); // 获取题目数量
+    string getGrade(); // 获取年级
+    double getUserAnswer();// 获取用户答案
 
-void HandleOutput();
+    void putStringPoly(string poly);// 打印多项式字符串 如 89 - (84-4) =?
+    void putRes(int num);// 输出错误题数
+};
 
 #endif
